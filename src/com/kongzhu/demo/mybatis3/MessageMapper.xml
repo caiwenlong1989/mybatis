@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kongzhu.demo.mybatis3.MessageMapper">
+    <insert id="insertOne" parameterType="com.kongzhu.demo.mybatis3.Message">
+        insert into message (id, text) values (#{id}, #{text})
+    </insert>
+    <update id="updateOne" parameterType="com.kongzhu.demo.mybatis3.Message">
+        update message set text = #{text} where id = #{id}
+    </update>
+    <delete id="deleteOne" parameterType="int">
+        delete from message where id = #{id}
+    </delete>
+    <select id="selectList" resultType="com.kongzhu.demo.mybatis3.Message">
+        select id, text from message
+    </select>
+</mapper>
