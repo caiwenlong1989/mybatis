@@ -12,7 +12,7 @@ public class Application {
         try {
             Message message = new Message(2, "Java");
             int num = mapper.insertOne(message);
-            sqlSession.commit();
+            sqlSession.commit(); // MyBatis默认关闭自动提交模式，所以增、删、改操作必须手动提交
             System.out.println(message);
             System.out.println("新增受影响的行数：" + num);
             System.out.println("--------------------------------------");
@@ -23,7 +23,7 @@ public class Application {
             
             message.setText("Java Core");
             num = mapper.updateOne(message);
-            sqlSession.commit();
+            sqlSession.commit(); // MyBatis默认关闭自动提交模式，所以增、删、改操作必须手动提交
             System.out.println(message);
             System.out.println("修改受影响的行数：" + num);
             System.out.println("--------------------------------------");
@@ -33,7 +33,7 @@ public class Application {
             System.out.println("--------------------------------------");
             
             num = mapper.deleteOne(message.getId());
-            sqlSession.commit();
+            sqlSession.commit(); // MyBatis默认关闭自动提交模式，所以增、删、改操作必须手动提交
             System.out.println(message);
             System.out.println("删除受影响的行数：" + num);
             System.out.println("--------------------------------------");
