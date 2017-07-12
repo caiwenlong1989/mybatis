@@ -20,6 +20,7 @@
     </environments>
 
     <mappers>
+        <!-- Using classpath relative resources -->
         <mapper resource="com/kongzhu/demo/mybatis/MessageMapper.xml"/>
     </mappers>
 </configuration>
