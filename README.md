@@ -1,5 +1,5 @@
 # mybatis
-MyBatis从入门到精通示例Demo
+MyBatis从入门到精通
 
 使用该示例Demo之前，需要做以下准备工作：
 
