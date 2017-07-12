@@ -2,6 +2,7 @@
 MyBatis从入门到精通示例Demo
 
 使用该示例Demo之前，需要做以下准备工作：
+
 1.下载jar包
     log4j-1.2.17.jar
     mybatis-3.4.4.jar
