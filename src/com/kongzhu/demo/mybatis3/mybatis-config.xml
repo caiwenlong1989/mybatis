@@ -8,6 +8,7 @@
     </settings>
 
     <typeAliases>
+        <!-- 设置实体类的别名，减少包名的冗余 -->
         <typeAlias type="com.kongzhu.demo.mybatis3.Message" alias="Message"/>
     </typeAliases>
 
@@ -24,7 +25,6 @@
     </environments>
 
     <mappers>
-        <!-- Using mapper interface classes -->
         <mapper class="com.kongzhu.demo.mybatis3.MessageMapper"/>
     </mappers>
 </configuration>

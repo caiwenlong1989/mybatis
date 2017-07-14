@@ -3,6 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+    <!-- 读取Java属性文件 -->
     <properties resource="com/kongzhu/demo/mybatis4/jdbc.properties"/>
 
     <settings>
@@ -17,6 +18,7 @@
         <environment id="development">
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
+                <!-- 设置需要动态配置的属性值 -->
                 <property name="driver" value="${driver}"/>
                 <property name="url" value="${url}"/>
                 <property name="username" value="${username}"/>
@@ -26,7 +28,6 @@
     </environments>
 
     <mappers>
-        <!-- Using mapper interface classes -->
         <mapper class="com.kongzhu.demo.mybatis4.MessageMapper"/>
     </mappers>
 </configuration>

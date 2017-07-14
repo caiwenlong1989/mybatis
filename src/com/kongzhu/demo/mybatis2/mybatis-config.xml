@@ -12,7 +12,7 @@
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://192.168.1.121:3306/mybatis?useSSL=true"/>
+                <property name="url" value="jdbc:mysql://192.168.1.126:3306/mybatis?useSSL=true"/>
                 <property name="username" value="root"/>
                 <property name="password" value="mysql"/>
             </dataSource>
@@ -20,7 +20,7 @@
     </environments>
 
     <mappers>
-        <!-- Using mapper interface classes -->
+        <!-- 使用 mapper 接口 -->
         <mapper class="com.kongzhu.demo.mybatis2.MessageMapper"/>
     </mappers>
 </configuration>

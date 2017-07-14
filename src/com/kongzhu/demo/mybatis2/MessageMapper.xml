@@ -2,7 +2,9 @@
 <!DOCTYPE mapper
          PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
          "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 这个 namespace 可以直接映射到在命名空间中同名的 Mapper 类 -->
 <mapper namespace="com.kongzhu.demo.mybatis2.MessageMapper">
+    <!-- 并将已映射的 SQL 语句中的名字、参数和返回类型匹配成方法 -->
     <select id="selectById" parameterType="int" resultType="string">
         select text from message where id = #{id}
     </select>
