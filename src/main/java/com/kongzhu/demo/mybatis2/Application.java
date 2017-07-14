@@ -12,7 +12,7 @@ public class Application {
         MessageMapper mapper = sqlSession.getMapper(MessageMapper.class);
         try {
             Integer id = 1;
-            // 通过接口动态代理实现 SQL 语句检索单条记录
+            // 通过 Mapper 接口动态代理实现 SQL 语句检索单条记录
             String message = mapper.selectById(id);
             System.out.println(message);
         } finally {

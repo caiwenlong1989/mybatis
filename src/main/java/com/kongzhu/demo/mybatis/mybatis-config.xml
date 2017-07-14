@@ -22,7 +22,7 @@
     </environments>
 
     <mappers>
-        <!-- 使用 classpath（src和resources）相对路径资源（XML映射文件） -->
+        <!-- 使用 classpath 相对路径资源（XML映射文件） -->
         <mapper resource="com/kongzhu/demo/mybatis/MessageMapper.xml"/>
     </mappers>
 </configuration>
