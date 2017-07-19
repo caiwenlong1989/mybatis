@@ -14,6 +14,22 @@ public class Application {
             // 根据 SQL 语句 Key（一个字符串字面量：namespace+id）和参数检索单条记录
             String message = sqlSession.selectOne("com.kongzhu.demo.mybatis.MessageMapper.selectById", id);
             System.out.println(message);
+            
+//            // 备用
+//            sqlSession.delete(statement);
+//            sqlSession.delete(statement, parameter);
+//            sqlSession.insert(statement);
+//            sqlSession.insert(statement, parameter);
+//            sqlSession.selectList(statement);
+//            sqlSession.selectList(statement, parameter);
+//            sqlSession.selectList(statement, parameter, rowBounds);
+//            sqlSession.selectMap(statement, mapKey);
+//            sqlSession.selectMap(statement, parameter, mapKey);
+//            sqlSession.selectMap(statement, parameter, mapKey, rowBounds);
+//            sqlSession.selectOne(statement);
+//            sqlSession.selectOne(statement, parameter);
+//            sqlSession.update(statement);
+//            sqlSession.update(statement, parameter);
         } finally {
             // 始终记得关闭SqlSession
             sqlSession.close();
