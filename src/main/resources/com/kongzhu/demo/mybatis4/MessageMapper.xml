@@ -2,17 +2,17 @@
 <!DOCTYPE mapper
          PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
          "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.kongzhu.demo.mybatis3.MessageMapper">
-    <insert id="insert" parameterType="Message">
+<mapper namespace="com.kongzhu.demo.mybatis4.MessageMapper">
+    <insert id="insert" parameterType="Message4">
         insert into message (id, text) values (#{id}, #{text})
     </insert>
-    <update id="update" parameterType="Message">
+    <update id="update" parameterType="Message4">
         update message set text = #{text} where id = #{id}
     </update>
     <delete id="delete" parameterType="int">
         delete from message where id = #{id}
     </delete>
-    <select id="selectList" resultType="Message">
+    <select id="selectList" resultType="Message4">
         select id, text from message
     </select>
 </mapper>
