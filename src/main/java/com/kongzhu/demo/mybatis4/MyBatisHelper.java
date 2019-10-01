@@ -21,19 +21,11 @@ public class MyBatisHelper {
     static {
         // XML配置文件相对路径
         String resource = "com/kongzhu/demo/mybatis4/mybatis-config.xml";
-        InputStream in = null;
-        try {
-            // Resources工具类，使从 classpath 或其他位置加载资源文件更加容易
-            in = Resources.getResourceAsStream(resource);
+        // Resources工具类，使从 classpath 或其他位置加载资源文件更加容易
+        try(InputStream in = Resources.getResourceAsStream(resource)) {
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(in);
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
-            if (in != null) {
-                try {
-                    in.close();
-                } catch (IOException e) {}
-            }
         }
     }
 
